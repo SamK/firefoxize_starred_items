@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-firefoxize-starred-items.py
+firefoxize_starred_items.py
 
 Reads a Google "Reader JSON" file exported from Google Reader and
 outputs an HTML file suitable for importing into Firefox's 

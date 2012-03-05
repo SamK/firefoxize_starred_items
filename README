@@ -1,4 +1,4 @@
-firefoxize-starred-items.py
+firefoxize_starred_items.py
 
 This script permits to convert your starred items in Google Reader into bookmarks for Firefox.
 
@@ -13,5 +13,5 @@ $ sudo apt-get install python-argparse
 
 Command line usage:
 
-firefoxize-starred-items.py --help
+firefoxize_starred_items.py --help
 
