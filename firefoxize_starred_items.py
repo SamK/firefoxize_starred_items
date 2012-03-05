@@ -19,10 +19,15 @@ import json, time, codecs
 import sys
 import os
 
-def get_data(InputFile):
-    with codecs.open(InputFile, 'r', encoding='utf-8') as f:
+def get_file(filename):
+    with codecs.open(filename, 'r', encoding='utf-8') as f:
         GooglesItems = json.load(f)['items']
     return GooglesItems
+
+def load_data(inputdata):
+    GooglesItems = json.loads(inputdata)['items']
+    return GooglesItems
+    
 
 def convert(data, subfolders=True):
 
@@ -30,6 +35,7 @@ def convert(data, subfolders=True):
     FeedItems = {}
 
     #for item in GooglesItems:
+    print "starting processing..."
     for item in data:
         feedTitle = item['origin']['title']
         feedUrl = item['origin']['htmlUrl']
@@ -77,6 +83,9 @@ def write_data(data,filename):
         file.write('\n')
     file.close()
 
+def dump_data(data):
+    return '\n'.join(data)
+
 def parse_arguments(version=None):
 
     import argparse
@@ -107,7 +116,7 @@ if __name__ == '__main__':
 
     # get the data
     try:
-        data = get_data(args.filename[0])
+        data = get_file(args.filename[0])
     except IOError, err:
         sys.stderr.write("%s\n" % str(err)) 
         sys.exit(1)
