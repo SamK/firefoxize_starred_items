@@ -35,7 +35,6 @@ def convert(data, subfolders=True):
     FeedItems = {}
 
     #for item in GooglesItems:
-    print "starting processing..."
     for item in data:
         feedTitle = item['origin']['title']
         feedUrl = item['origin']['htmlUrl']
