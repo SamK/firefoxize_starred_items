@@ -20,21 +20,16 @@ Extract the content
 If used in command line, argparse is required.
 
 Under Debian/Ubuntu:
+
     $ sudo apt-get install python-argparse
 
 Set the script executable
+
     chmod +x samyboy-firefoxize_starred_items.py
 
 ### Command line usage:
-
-Basic usage:
-
-    ./samyboy-firefoxize_starred_items.py starred-items.json
-The script will produce a html file which you can import in Firefox.
-
-The available options are available with the --help switch:
-
-$ ./firefoxize_starred_items.py --help
+<pre><code>
+$ ./firefoxize_starred_items.py -h
 usage: firefoxize_starred_items.py [-h] [-v] [-q] [-V] [-s] [-o outfile.html]
                                    filename.json
 
@@ -52,8 +47,9 @@ optional arguments:
   -o outfile.html, --output outfile.html
                         determine output file. default is ./The input JSON
                         filename.html
-
+</code></pre>
 
 ### Python module usage
 
 Todo...
+
